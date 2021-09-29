@@ -60,15 +60,100 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         centerTitle: false,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Stack(
+        alignment: AlignmentDirectional.topCenter,
+        //mainAxisAlignment: MainAxisAlignment.center,
         //crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Expanded(
-          flex: 60,
-          child:Positioned(
+         // Expanded(
+          //flex: 60,
+          //child:Positioned(
+          Positioned(
             top:0,
             left:0,
+            bottom:0,
+            right:0,
+            child:Container(
+              child: Center(
+                child:Container(
+
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFF80AB),
+                    image: const DecorationImage(
+                        image: NetworkImage("url"),
+                        fit: BoxFit.cover),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 0,
+                    ),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  width:300,
+                  height:200,
+                  alignment: Alignment.center,
+                  child: Positioned(
+                    top:500,
+                  left:0,
+                  right:0,
+                  bottom:0,
+                  child: Stack(
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      const Text(
+                        'Abderrahmane Seriai\n'
+                            'seriai.abderrahmane@gmail.com\n\n'
+                            'twitter: XXXXXXXX',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    /*const Positioned(
+                      top:-20,
+                      right:0,
+                      left:0,
+                      bottom:30,
+                      child: Text(
+                        'twitter: XXXXXXXX',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),*/
+                      const Positioned(
+                        top:0,
+                      right:0,
+                      left:-150,
+                      bottom:-40,
+
+                      child: Icon(
+                          Icons.accessibility_new_outlined,
+                        color: Colors.white,
+                      ), //child: null,
+                      ),
+                      Text(
+                        '',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                    ],
+                  ),
+                  ),
+                ),
+                //),
+              ),
+            ),
+          ),
+        Positioned(
+            top:-200,
+            left:0,
+            bottom:0,
+            right :0,
       child:Container(
       child: Center(
           child: Container(
@@ -89,51 +174,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       ),
           ),
-          ),
-      Expanded(
+        //  ),
+      //Expanded(
           //flex: 6,
-          child:Positioned(
-        top:5,
-        left:5,
-          child:Container(
-          decoration: BoxDecoration(
-          color: const Color(0xFFFF80AB),
-          image: const DecorationImage(
-              image: NetworkImage("url"),
-          fit: BoxFit.cover),
-          border: Border.all(
-            color: Colors.black,
-            width: 0,
-          ),
-          borderRadius: BorderRadius.circular(15),
-        ),
-        width:300,
-        height:200,
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Abderrahmane Seriai\n'
-                  'seriai.abderrahmane@gmail.com\n'
-                  'twitter: XXXXXXXX',
-              style: TextStyle(
-                color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic
-              ),
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      ),
-      ),
+          //child:Positioned(
+
           ],
       ),
     );
